@@ -9,4 +9,5 @@ const createLikeButtonInitiatorWithRestaurant = async (restaurant) => {
   });
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export { createLikeButtonInitiatorWithRestaurant };

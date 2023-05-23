@@ -7,7 +7,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
   ({ request }) => request.destination === 'image',
-  new StaleWhileRevalidate()
+  new StaleWhileRevalidate(),
 );
 
 registerRoute(
