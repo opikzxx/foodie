@@ -6,8 +6,8 @@ import { StaleWhileRevalidate } from 'workbox-strategies';
 precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
-  ({ url }) => url.href.startsWith('./heros/hero-image-large.jpg'),
-  new StaleWhileRevalidate(),
+  ({ request }) => request.destination === 'image',
+  new StaleWhileRevalidate()
 );
 
 registerRoute(
