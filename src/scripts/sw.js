@@ -6,7 +6,7 @@ import { StaleWhileRevalidate } from 'workbox-strategies';
 precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
-  ({ request }) => request.destination === 'image',
+  ({ url }) => url.href.startsWith('https://use.fontawesome.com/b070c8f1df.js'),
   new StaleWhileRevalidate(),
 );
 
