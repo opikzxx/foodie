@@ -1,18 +1,16 @@
 {
-  "homepage": "https://opikzxx.github.io/foodie-apps/",
   "name": "foodie-apps-lite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && npm run build-image",
     "serve": "http-server dist --port 9000",
     "build-serve": "npm run build && npm run serve",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js",
-    "deploy": "gh-pages -d deploy"
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": "your_name <your_email@gmail.com>",
